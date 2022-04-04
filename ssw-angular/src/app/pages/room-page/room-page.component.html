@@ -8,5 +8,7 @@
     </form>
   </mat-form-field>
 
-  <mat-card class="log"></mat-card>
+  <mat-card class="log">
+    <p *ngFor="let log of logs">{{log}}</p>
+  </mat-card>
 </mat-card>
