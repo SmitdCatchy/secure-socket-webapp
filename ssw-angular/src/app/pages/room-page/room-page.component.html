@@ -1,0 +1,12 @@
+<mat-card>
+  <h2>{{room.name}}</h2>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Secret content</mat-label>
+    <form [formGroup]="contentForm">
+      <textarea matInput formControlName="secretContent"></textarea>
+    </form>
+  </mat-form-field>
+
+  <mat-card class="log"></mat-card>
+</mat-card>
