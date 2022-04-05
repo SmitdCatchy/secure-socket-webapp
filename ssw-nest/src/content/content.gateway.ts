@@ -8,8 +8,8 @@ import {
   WebSocketGateway,
   WebSocketServer,
 } from '@nestjs/websockets';
-import { Server, Socket } from 'socket.io'; // I use this lib to handle socket connections, because it is the default in nestjs and I also have prior experience with this library
-import { generateKeySync } from 'crypto'; // I use this lib to generater the private keys, this is a default node lib to handle such tasks
+import { Server, Socket } from 'socket.io';
+import { generateKeySync } from 'crypto';
 
 @WebSocketGateway({ cors: true })
 export class ContentGateway

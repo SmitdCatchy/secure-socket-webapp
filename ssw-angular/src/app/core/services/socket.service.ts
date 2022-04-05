@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Socket } from 'ngx-socket-io';
 import { catchError, map, Observable, of, tap } from 'rxjs';
-import * as crypto from 'crypto-js'; // I use this lib to handly any encoding, decoding and hashing, this is the most widely used js library to handle such tasks
+import * as crypto from 'crypto-js';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 const CipherOption = {

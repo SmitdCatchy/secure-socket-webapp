@@ -46,7 +46,6 @@ $light-theme: mat.define-light-theme(
   createPalette($warn, $white, $black)
 );
 
-// @include angular-material-theme($light-theme);
 @include mat.all-component-themes($light-theme);
 
 html,
