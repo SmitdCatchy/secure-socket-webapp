@@ -4,13 +4,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const importsAndExport = [
   MatButtonModule,
   MatInputModule,
   MatFormFieldModule,
   MatCardModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatSnackBarModule
 ];
 
 @NgModule({

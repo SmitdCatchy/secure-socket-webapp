@@ -9,7 +9,7 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
+import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io'; // I use this lib to handle the socket client-side, I have prior knowledge of Socket.io and using this lib provides an easy-to-use abstraction on top of it
 import { environment } from 'src/environments/environment';
 
 const config: SocketIoConfig = { url: environment.sockerUrl };

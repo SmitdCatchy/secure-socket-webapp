@@ -14,7 +14,7 @@ const routes: Routes = [
     component: RoomPageComponent
   },
   {
-    path: 'room/:id',
+    path: 'room/:token',
     component: RoomPageComponent
   },
   {
