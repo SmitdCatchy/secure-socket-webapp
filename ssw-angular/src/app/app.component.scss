@@ -1,0 +1,13 @@
+:host {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  min-height: 100vh;
+}
+
+main {
+  margin: 24px;
+}
+
+router-outlet {
+  display: none;
+}

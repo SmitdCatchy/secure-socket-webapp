@@ -1,0 +1,59 @@
+@use '@angular/material' as mat;
+@import '@angular/material/theming';
+@import 'colours';
+@include mat-core();
+
+@function createPalette($base-color, $font-primary, $font-secondary) {
+  @return mat-palette(
+    (
+      50: lighten($base-color, 30%),
+      100: lighten($base-color, 30%),
+      200: lighten($base-color, 20%),
+      300: lighten($base-color, 10%),
+      400: $base-color,
+      500: $base-color,
+      600: darken($base-color, 10%),
+      700: darken($base-color, 20%),
+      800: darken($base-color, 30%),
+      900: darken($base-color, 30%),
+      A100: lighten($base-color, 30%),
+      A200: lighten($base-color, 20%),
+      A400: lighten($base-color, 10%),
+      A700: $base-color,
+      contrast: (
+        50: $font-secondary,
+        100: $font-secondary,
+        200: $font-secondary,
+        300: $font-primary,
+        400: $font-primary,
+        500: $font-primary,
+        600: $font-primary,
+        700: $font-primary,
+        800: $font-primary,
+        900: $font-primary,
+        A100: $font-secondary,
+        A200: $font-secondary,
+        A400: $font-secondary,
+        A700: $font-secondary
+      )
+    )
+  );
+}
+
+$light-theme: mat.define-light-theme(
+  createPalette($primary, $white, $black),
+  createPalette($accent, $black, $white),
+  createPalette($warn, $white, $black)
+);
+
+@include mat.all-component-themes($light-theme);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: $background;
+}

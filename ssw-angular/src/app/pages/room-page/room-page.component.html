@@ -1,0 +1,16 @@
+<mat-card>
+  <h2>{{room.name}}</h2>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Secret content</mat-label>
+    <form [formGroup]="contentForm">
+      <textarea matInput formControlName="secretContent"></textarea>
+    </form>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="copyJoinLink()" *ngIf="room.owner">Copy join link</button>
+
+  <mat-card class="log">
+    <p *ngFor="let log of logs">{{log}}</p>
+  </mat-card>
+</mat-card>

@@ -1,0 +1,24 @@
+:host {
+  display: block;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  mat-form-field,
+  .log {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .log {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: stretch;
+    max-height: 200px;
+    overflow: auto;
+  }
+}
